@@ -111,11 +111,11 @@ class DingTalkNotice(Logger):
                 at_all = False
             else:
                 at_all = True
-            self.content += msg
+            content = self.content + msg
             data = {
                 "msgtype": "text",
                 "text": {
-                    "content": self.content
+                    "content": content
                 },
                 "at": {
                     "isAtAll": at_all
